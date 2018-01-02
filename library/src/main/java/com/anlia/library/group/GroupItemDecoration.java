@@ -62,10 +62,10 @@ public class GroupItemDecoration extends RecyclerView.ItemDecoration {
 
             int a = 0;
             for(int i=0;i<groupList.size();i++){//保存groupItem与其startPosition的对应关系
-                int p = groupList.get(i).getStartPosition();
-                if(groups.get(p)==null){
-                    groups.put(p,groupList.get(i));
-                    groupPositions[a] = p;
+                int startPosition = groupList.get(i).getStartPosition();
+                if(groups.get(startPosition)==null){
+                    groups.put(startPosition,groupList.get(i));
+                    groupPositions[a] = startPosition;
                     a++;
                 }
             }
